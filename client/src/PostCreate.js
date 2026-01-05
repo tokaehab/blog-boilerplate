@@ -7,7 +7,7 @@ const PostCreateForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     console.log(title);
-    await axios.post("http://localhost:4000/posts", {
+    await axios.post("http://posts-clusterip-srv:4000/posts", {
       title,
     });
     setTitle("");
